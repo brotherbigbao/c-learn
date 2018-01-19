@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void main()
 {
@@ -8,7 +9,9 @@ void main()
     //func_5_10();
     //func_5_10_2();
     //func_6_4();
-    func_6_8();
+    //func_6_8();
+    //func_6_10();
+    func_6_11();
 }
 
 //99乘法表
@@ -106,5 +109,30 @@ func_6_8()
 //编写程序,实现strcat函数的功能,将字符串s1与s2尾首相接
 func_6_10()
 {
-    char str1[80], str2[80];
+    char str1[80], str2[80]; int i,j;
+    gets(str1);
+    gets(str2);
+    i=strlen(str1);
+    j=0;
+    while (str2[j]!='\0') str1[i++]=str2[j++];
+    str1[i]='\0';
+    printf("%s", str1);
+}
+
+//将用字符串表示的十六进制数转化为十进制数 ， 如2A转化为42 。 十六进制可以
+//由数字0到9和大写字母A至F组成的字符串表示 。
+func_6_11()
+{
+    int data=0,i,n; char str[10];
+    printf("enter hex string\n");
+    gets(str);
+    for(i=0; str[i]!='\0'; i++){
+        if(str[i]>='0'&&str[i]<='9')
+            n=str[i]-'0';
+        else if(str[i]>='A'&&str[i]<='F')
+            n=str[i]-'A'+10;
+        else exit(0);
+        data=data*16+n;
+    }
+    printf("%d", data);
 }
