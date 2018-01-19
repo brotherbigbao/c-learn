@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-void main()
+void main2()
 {
     //func_5_8();
     //func_5_9();

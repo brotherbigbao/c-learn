@@ -4,4 +4,4 @@ project(c_learn)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(c_learn
-        main.c)
+        main.c 7_5.c)
